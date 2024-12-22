@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Proyecto integral - Carlos Durand </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/Logo.ico">
+</head>
+
+<body>
+    
+    <script src="js/script.js"></script>
+    
+    <header>
+        
+        <h1> Página en la que se venden cosas tecnológicas </h1>
+        <p> Proyecto de entrega del curso Talento Tech <br>   
+        dictado por el Gobierno de la ciudad de Buenos Aires </p>
+
+    </header>
+    
+    
+        <nav class="navegador">
+            <ul class="lista">
+                <a href="pages/celular.html"> <li>  Celular  </li> </a>
+                <a href="pages/iphone.html"> <li> Iphone </li> </a>
+                <a href="pages/laptop.html"> <li> Laptop </li> </a>
+                <a href="pages/pcgamer.html"> <li> Pc Gamer </li> </a>
+                <a href="pages/silla.html"> <li> Silla </li> </a> 
+                <a href="pages/tablet.html"> <li> Tablet</li> </a> 
+            </ul>
+        </nav>
+
+    <main>
+
+        <section class="formulario">
+            <form action="Link" method="post" target="_blank">
+                <fieldset>
+                    <legend> Danos tu opinión </legend>
+                    <label for="Nombre"> Nombre completo:</label>
+                    <input type="text" id="Nombre" name="Nombre" required><br><br>
+                    <label for="Email"> Correo electronico: </label>
+                    <input type="email" id="Email" name="Email" required><br><br>
+                    <textarea name="Opinion" id="Opinion" rows="5" cols="40"> Danos tu opinión </textarea><br><br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </fieldset>   
+            </form>
+        </section>
+
+        <section class="tarjetas">
+            <article class="articulo">
+                <div class="foto"><a href="pages/celular.html"><img src="img/Celular.jpg" alt="" srcset=""> </a></div>
+                
+                <div class="articulo-content">
+                    <h2> Los camiones se utilizan de la siguiente manera</h2>
+                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+                </div>
+            </article>
+       
+            <article class="articulo">
+                <div class="foto"><a href="pages/iphone.html"><img src="img/Iphone.jpg" alt="" srcset=""> </a></div>
+                
+                <div class="articulo-content">
+                    <h2> Los camiones se utilizan de la siguiente manera</h2>
+                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+                </div>
+            </article>
+            
+            <article class="articulo">
+                <div class="foto"><a href="pages/laptop.html"><img src="img/Laptop.jpg" alt="" srcset=""> </a></div>
+                
+                <div class="articulo-content">
+                    <h2> Los camiones se utilizan de la siguiente manera</h2>
+                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+                </div>
+            </article>
+        
+            <article class="articulo">  
+                <div class="foto"> <a href="pages/pcgamer.html"><img src="img/PcGamer.jpg" alt="" srcset="" > </a></div>
+                
+                <div class="articulo-content">
+                    <h2> Las motos se utilizan de la siguiente manera</h2>
+                    <p> El nombre comunmente utilizado es motocicleta aunque posea dos ruedas y no una como indica su nombre <br> 
+                        Al hacer tarde la tarea no consegui que el flexbox actue correctamente asi que tengo que tratar de que funcione eso </p>
+                </div>
+            </article>  
+
+            <article class="articulo">
+                <div class="foto"><a href="pages/silla.html"> <img src="img/Silla.jpg" alt="" srcset=""> </a></div>
+                
+                <div class="articulo-content">
+                    <h2> Los autos se utilizan de la siguientge manera </h2>
+                    <p> La mayoria de ellos hacen los siguente, tienen cuatro ruedas mas la rueda de auxilio </p>
+                </div>
+            </article>
+        
+            <article class="articulo">
+                <div class="foto"><a href="pages/tablet.html"><img src="img/Tablet.jpg" alt="" srcset=""> </a></div>
+                
+                <div class="articulo-content">
+                    <h2> Los camiones se utilizan de la siguiente manera</h2>
+                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+               </div>
+            </article>
+        
+        </section>
+
+        <section class="productos">
+            
+            <div class="producto">
+                <span> 
+                    "Stock :"
+                <span id="stock-celular">15</span>
+                </span>
+                <button onclick="agregarAlCarrito('Celular', 500, 'celular')">Agregar</button>
+            </div>
+
+            <div class="producto">
+                <span> 
+                    Stock :
+                <span id="stock-iphone">12</span>
+                </span>
+                <button onclick="agregarAlCarrito('Iphone', 800, 'iphone')">Agregar</button>
+            </div>
+
+            <div class="producto">
+                <span> 
+                    Stock :
+                <span id="stock-laptop">8</span>
+                </span>
+                <button onclick="agregarAlCarrito('Laptop', 1000, 'laptop')">Agregar</button>
+            </div>
+
+            <div class="producto">
+                <span> 
+                    Stock :
+                <span id="stock-pcgamer">5</span>
+                </span>
+                <button onclick="agregarAlCarrito('Pc Gamer', 1200, 'pcgamer')">Agregar</button>
+            </div>
+
+            <div class="producto">
+                <span> 
+                    "Stock :"
+                <span id="stock-silla">30</span>
+                </span>
+                <button onclick="agregarAlCarrito('Silla', 100, 'silla')">Agregar</button>
+            </div>
+
+            <div class="producto">
+                <span> 
+                    "Stock :"
+                <span id="stock-tablet">10</span>
+                </span>
+                <button onclick="agregarAlCarrito('Tablet', 300, 'tablet')">Agregar</button>
+            </div>
+
+        </section>
+
+        <section>
+                
+            <div id="carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+                <p>Descuento: $<span id="descuento-carrito">0</span></p>
+                <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+                <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+                <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                <button onclick="mostrarCheckout()">Checkout</button>
+            </div>
+        
+            <!-- Modal de Checkout -->
+            <div id="checkout-modal">
+                <div class="checkout-content">
+                    <h2>Finalizar Compra</h2>
+                    <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+                    <p>Descuento: $<span id="modal-descuento">0</span></p>
+                    <p>IVA: $<span id="modal-iva">0</span></p>
+                    <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+                    <button onclick="realizarCompra()">Confirmar Compra</button>
+                    <button onclick="cerrarCheckout()">Cancelar</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    
+    <footer>
+        <div id="pie">
+            <h3> Gracias por ver la pagina </h3>
+           <p> Contacto <br> Para comunicarte podes mandar mail a cccccc@gmail.com <br> 
+            Podes contactarte a traves de nuestro
+                <a href="https://fb.com"> facebook</a> nuestra página de 
+                <a href="https://x.com">X </a> o a traves de nuestro 
+                <a href="https://instagram.com"> instagram </a> 
+            <br> Esperamos te haya servido </p>
+        </div>
+    </footer>
+
+</body>
+</html>

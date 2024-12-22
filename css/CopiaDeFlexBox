@@ -1,0 +1,41 @@
+.tarjeta a:hover{
+    box-shadow: 3px 3px 8px #817272;
+}
+
+.tarjeta-content{
+    padding: 1.4em;
+}
+
+.tarjeta-content h2{
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+
+.tarjeta-content p{
+    font-size: 95%;  /*.95em*/
+}
+
+figure {
+    margin: 0;
+}
+
+img{
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+/*Empezamos a darle flex*/
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    background: hsl(0, 0%, 100%);
+    margin-bottom: 2em;
+    width: 33%;
+}
