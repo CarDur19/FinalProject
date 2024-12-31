@@ -38,24 +38,35 @@ const productos = {
     }
 };
 
-// Constante para el IVA
-const IVA = 0.21;  // 21% de IVA
+const IVA = 0.21;  
 
 // Inicializar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarrito);
 // Validar si es que hay productos en el carrito para mostrarlo o no
 document.addEventListener('DOMContentLoaded', mirarCarrito);
 
+
+/* añadido para que el Carrito tambien este escondido */
 function mirarCarrito() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     if (carrito.length === 0) {
-        const model = document.getElementById('carrito');
+        document.getElementById('carrito');
        ocultarCarro();
     } else {
-        const model = document.getElementById('carrito');
+        document.getElementById('carrito');
         mostrarCarro();
     }
 }
+
+function mostrarCarro() {
+    const model = document.getElementById('carrito');
+    model.style.display = 'block';
+}
+function ocultarCarro(){
+    const model = document.getElementById('carrito');
+    model.style.display = 'none';
+}
+
 
 function agregarAlCarrito(nombre, precio, productoKey) {
 
@@ -126,6 +137,7 @@ function renderizarCarrito() {
         botonEliminar.textContent = 'Eliminar';
         botonEliminar.onclick = () => eliminarDelCarrito(index);
         
+        
         li.appendChild(botonEliminar);
         listaCarrito.appendChild(li);
         
@@ -143,6 +155,8 @@ function renderizarCarrito() {
     descuentoCarrito.textContent = descuentoTotal.toFixed(2);
     ivaCarrito.textContent = ivaTotal.toFixed(2);
     totalCarrito.textContent = total.toFixed(2);
+
+    mirarCarrito();
 }
 
 function eliminarDelCarrito(index) {
@@ -178,7 +192,7 @@ function vaciarCarrito() {
     // Renderizar
     renderizarCarrito();
 
-    ocultarCarro();
+    mirarCarrito();
 }
 
 function cargarCarrito() {
@@ -220,7 +234,6 @@ function realizarCompra() {
     localStorage.removeItem('carrito');
     cerrarCheckout();
     renderizarCarrito();
-    ocultarCarro();
 }
 
 function cerrarCheckout() {
@@ -228,13 +241,3 @@ function cerrarCheckout() {
     modal.style.display = 'none';
 }
 
-/* añadido para que el Carrito tambien este escondido */
-
-function mostrarCarro() {
-    const model = document.getElementById('carrito');
-    model.style.display = 'block';
-}
-function ocultarCarro(){
-    const model = document.getElementById('carrito');
-    model.style.display = 'none';
-}
