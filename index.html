@@ -17,25 +17,24 @@
         <h1> Página en la que se venden cosas tecnológicas </h1>
         <p> Proyecto de entrega del curso Talento Tech <br>   
         dictado por el Gobierno de la ciudad de Buenos Aires </p>
-
+        <br>
+        <p> Creado con lo aprendido en el programa Talento Tech</p>
     </header>
-    
-    
+
         <nav class="navegador">
             <ul class="lista">
-                <a href="pages/celular.html"> <li>  Celular  </li> </a>
-                <a href="pages/iphone.html"> <li> Iphone </li> </a>
-                <a href="pages/laptop.html"> <li> Laptop </li> </a>
-                <a href="pages/pcgamer.html"> <li> Pc Gamer </li> </a>
-                <a href="pages/silla.html"> <li> Silla </li> </a> 
-                <a href="pages/tablet.html"> <li> Tablet</li> </a> 
+                <li> <a href="pages/celular.html"> Celular </a> </li>
+                <li> <a href="pages/iphone.html"> Iphone </a> </li>
+                <li> <a href="pages/laptop.html">  Laptop </a> </li>
+                <li> <a href="pages/pcgamer.html"> Pc Gamer </a> </li>
+                <li> <a href="pages/silla.html">  Silla </a> </li>
+                <li> <a href="pages/tablet.html">  Tablet </a></li> 
             </ul>
-        </nav>
 
     <main>
 
         <section class="formulario">
-            <form action="Link" method="post" target="_blank">
+            <form action="" method="link" target="">
                 <fieldset>
                     <legend> Danos tu opinión </legend>
                     <label for="Nombre"> Nombre completo:</label>
@@ -54,46 +53,89 @@
                 <div class="foto"><a href="pages/celular.html"><img src="img/Celular.jpg" alt="" srcset=""> </a></div>
                 
                 <div class="articulo-content">
-                    <h2> Los camiones se utilizan de la siguiente manera</h2>
-                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+                    <h2> Celulares  de casi ultima generacion listos para vender</h2>
+                    <p> Los celulares se empezaron a volver realmente populares a partir de la decada de los 80.
+                    <br> Se utilizan en su gran mayoria para distintas cosas sobre todo para ver videos y/o buscar ingformacion</p>
                 </div>
+
+                <div class="producto">
+                    <span> Valor - $500 </span>
+                    <span> Stock : <span id="stock-celular">15</span> </span>
+                    <button onclick="agregarAlCarrito('Celular', 500, 'celular')">Agregar</button>
+                </div>                "
             </article>
        
             <article class="articulo">
                 <div class="foto"><a href="pages/iphone.html"><img src="img/Iphone.jpg" alt="" srcset=""> </a></div>
                 
                 <div class="articulo-content">
-                    <h2> Los camiones se utilizan de la siguiente manera</h2>
-                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+                    <h2> Iphones 100 por ciento reales no feik un link mega </h2>
+                    <p> Creados por el Steve Jobs en los años '80 se popularizaron como celulares de alta gama.
+                    <br> Aunque actualmente hay telefonos mucho mas baratos que son capaces de hacer lo mismo o mas
+                    de manera muchisimo mas barata.
+                    <br> Suele decirse que se doblan con suma facilidad al guardarlo en un bolsillo del pantalón.
+                    </p>
                 </div>
+
+                <div class="producto">
+                    <span> Valor - $800 </span>
+                    <span> Stock : <span id="stock-iphone">12</span></span>
+                    <button onclick="agregarAlCarrito('Iphone', 800, 'iphone')">Agregar</button>
+                </div>                
+            
             </article>
             
             <article class="articulo">
                 <div class="foto"><a href="pages/laptop.html"><img src="img/Laptop.jpg" alt="" srcset=""> </a></div>
                 
                 <div class="articulo-content">
-                    <h2> Los camiones se utilizan de la siguiente manera</h2>
-                    <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
+                    <h2> Las laptops son computadoras portatiles que se emplean mas que nada debido a su mayor movilidad</h2>
+                    <p> Las laptops son capaces de moverse con suma facilidad debido a su tamaño y peso 
+                    <br> En venta laptops de muy buena calidad aprobadas por el ARCA
+                    </p>
                 </div>
+
+                <div class="producto">
+                    <span> Valor - $1000</span>
+                    <span> Stock : <span id="stock-laptop">8</span> </span> 
+                    <button onclick="agregarAlCarrito('Laptop', 1000, 'laptop')">Agregar</button>
+                </div>
+         
             </article>
         
             <article class="articulo">  
                 <div class="foto"> <a href="pages/pcgamer.html"><img src="img/PcGamer.jpg" alt="" srcset="" > </a></div>
                 
                 <div class="articulo-content">
-                    <h2> Las motos se utilizan de la siguiente manera</h2>
-                    <p> El nombre comunmente utilizado es motocicleta aunque posea dos ruedas y no una como indica su nombre <br> 
-                        Al hacer tarde la tarea no consegui que el flexbox actue correctamente asi que tengo que tratar de que funcione eso </p>
+                    <h2> PC Gamer de última generación que no se ssabe como llegó a Argentina ya que la importacion estaba cerrada </h2>
+                    <p> Las PC Gamers, en este caso, son capaces de aguantar cualquier juego al maximo de calidad o sin limites de FPS 
+                    <br> Traida completamente desde el exterior y ensamblada en Tierra del Fuego esta pc nunca te defraudara no dudes en comprar una para vos
+                      o para regalar.  </p>
                 </div>
+
+                <div class="producto">
+                    <span> Valor - $1200 </span>
+                    <span> Stock : <span id="stock-pcgamer">5</span></span>
+                    <button onclick="agregarAlCarrito('Pc Gamer', 1200, 'pcgamer')">Agregar</button>
+                </div>
+
             </article>  
 
             <article class="articulo">
                 <div class="foto"><a href="pages/silla.html"> <img src="img/Silla.jpg" alt="" srcset=""> </a></div>
                 
                 <div class="articulo-content">
-                    <h2> Los autos se utilizan de la siguientge manera </h2>
-                    <p> La mayoria de ellos hacen los siguente, tienen cuatro ruedas mas la rueda de auxilio </p>
+                    <h2> Silla de coca </h2>
+                    <p> La unica y legendaria silla de Coca capaz de aguantar hasta 1.500 kg sin que se doble ni nada por el estilo
+                    <br> Llevate este espectacular producto a un precio irrisorio sin nada que temer a que te estafen.</p>
                 </div>
+
+                <div class="producto">
+                    <span> Silla - $100 </span>
+                    <span> Stock : <span id="stock-silla">30</span> </span>
+                    <button onclick="agregarAlCarrito('Silla', 100, 'silla')">Agregar</button>
+                </div>
+                
             </article>
         
             <article class="articulo">
@@ -103,60 +145,15 @@
                     <h2> Los camiones se utilizan de la siguiente manera</h2>
                     <p> Los camiones son los principales maneras en las que se hace el traslado de mercaderia en tierra</p>
                </div>
+
+            <div class="producto">
+                <span> Valor - $300 </span>
+                <span> Stock :<span id="stock-tablet">10</span> </span>
+                <button onclick="agregarAlCarrito('Tablet', 300, 'tablet'); mostrarCarro()">Agregar</button>
+            </div>
+
             </article>
         
-        </section>
-
-        <section class="productos">
-            
-            <div class="producto">
-                <span> 
-                    "Stock :"
-                <span id="stock-celular">15</span>
-                </span>
-                <button onclick="agregarAlCarrito('Celular', 500, 'celular')">Agregar</button>
-            </div>
-
-            <div class="producto">
-                <span> 
-                    Stock :
-                <span id="stock-iphone">12</span>
-                </span>
-                <button onclick="agregarAlCarrito('Iphone', 800, 'iphone')">Agregar</button>
-            </div>
-
-            <div class="producto">
-                <span> 
-                    Stock :
-                <span id="stock-laptop">8</span>
-                </span>
-                <button onclick="agregarAlCarrito('Laptop', 1000, 'laptop')">Agregar</button>
-            </div>
-
-            <div class="producto">
-                <span> 
-                    Stock :
-                <span id="stock-pcgamer">5</span>
-                </span>
-                <button onclick="agregarAlCarrito('Pc Gamer', 1200, 'pcgamer')">Agregar</button>
-            </div>
-
-            <div class="producto">
-                <span> 
-                    "Stock :"
-                <span id="stock-silla">30</span>
-                </span>
-                <button onclick="agregarAlCarrito('Silla', 100, 'silla')">Agregar</button>
-            </div>
-
-            <div class="producto">
-                <span> 
-                    "Stock :"
-                <span id="stock-tablet">10</span>
-                </span>
-                <button onclick="agregarAlCarrito('Tablet', 300, 'tablet')">Agregar</button>
-            </div>
-
         </section>
 
         <section>

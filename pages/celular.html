@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css">
+    
 </head>
 
 <body>
 
     <script src="../js/script.js"></script>
-
+    
     <header>
         
         <h1> Pagina en la que se venden cosas tecnologicas </h1>
         <p> Página capaz de auto adaptarse segun el tamaño de donde se está viendo </p>
+        <br>
+        <p> Creada con lo aprendido en el programa: Talento Tech </p>
 
     </header>
 
@@ -38,15 +41,46 @@
                 <h2> Las motos se utilizan de la siguiente manera</h2>
                 <p> El nombre comunmente utilizado es motocicleta aunque posea dos ruedas y no una como indica su nombre </p>
             </section>
+    
+
+            <div class="producto">
+                <span> 
+                    "Stock :"
+                <span id="stock-laptop">9</span>
+                </span>
+                <button onclick="agregarAlCarrito('Laptop', 800, 'laptop')">Agregar</button>
+            </div>
+
+        </section>
+    
+        <section>
+                
+            <div id="carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+                <p>Descuento: $<span id="descuento-carrito">0</span></p>
+                <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+                <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+                <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                <button onclick="mostrarCheckout()">Checkout</button>
+            </div>
+        
+            <!-- Modal de Checkout -->
+            <div id="checkout-modal">
+                <div class="checkout-content">
+                    <h2>Finalizar Compra</h2>
+                    <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+                    <p>Descuento: $<span id="modal-descuento">0</span></p>
+                    <p>IVA: $<span id="modal-iva">0</span></p>
+                    <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+                    <button onclick="realizarCompra()">Confirmar Compra</button>
+                    <button onclick="cerrarCheckout()">Cancelar</button>
+                </div>
+            </div>
+
         </section>
 
-        <div class="producto">
-            <span> 
-                "Stock :"
-            <span id="stock-laptop">9</span>
-            </span>
-            <button onclick="agregarAlCarrito('Laptop', 800, 'laptop')">Agregar</button>
-        </div>
     </main>
     
     <footer>

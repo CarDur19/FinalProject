@@ -43,11 +43,24 @@ const IVA = 0.21;  // 21% de IVA
 
 // Inicializar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarrito);
+// Validar si es que hay productos en el carrito para mostrarlo o no
+document.addEventListener('DOMContentLoaded', mirarCarrito);
+
+function mirarCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    if (carrito.length === 0) {
+        const model = document.getElementById('carrito');
+        model.style.display = 'none';
+    } else {
+        const model = document.getElementById('carrito');
+        model.style.display = 'block';
+    }
+}
 
 function agregarAlCarrito(nombre, precio, productoKey) {
+
     // Obtener el producto específico
     const producto = productos[productoKey];
-
     // Validar stock
     if (producto.stock <= 0) {
         alert('¡Producto agotado!');
@@ -56,12 +69,12 @@ function agregarAlCarrito(nombre, precio, productoKey) {
 
     // Obtener el carrito actual del localStorage
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    
+
     // Agregar nuevo producto
     carrito.push({ 
         nombre: producto.nombre, 
         precio: producto.precio,
-        productoKey: productoKey
+        productoKey,
     });
     
     // Reducir stock
@@ -73,6 +86,7 @@ function agregarAlCarrito(nombre, precio, productoKey) {
     
     // Actualizar vista del carrito
     renderizarCarrito();
+    mostrarCarro();
 }
 
 function renderizarCarrito() {
@@ -133,7 +147,7 @@ function renderizarCarrito() {
 
 function eliminarDelCarrito(index) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    
+
     // Recuperar el producto para devolver stock
     const producto = productos[carrito[index].productoKey];
     producto.stock++;
@@ -163,6 +177,8 @@ function vaciarCarrito() {
     
     // Renderizar
     renderizarCarrito();
+
+    ocultarCarro();
 }
 
 function cargarCarrito() {
@@ -202,15 +218,24 @@ function realizarCompra() {
     
     // Vaciar carrito
     localStorage.removeItem('carrito');
-    
-    // Cerrar modal
     cerrarCheckout();
-    
-    // Renderizar carrito vacío
     renderizarCarrito();
+    ocultarCarro();
 }
 
 function cerrarCheckout() {
     const modal = document.getElementById('checkout-modal');
     modal.style.display = 'none';
+    ocultarCarro();
+}
+
+/* añadido para que el Carrito tambien este escondido */
+
+function mostrarCarro() {
+    const model = document.getElementById('carrito');
+    model.style.display = 'block';
+}
+function ocultarCarro(){
+    const model = document.getElementById('carrito');
+    model.style.display = 'none';
 }
