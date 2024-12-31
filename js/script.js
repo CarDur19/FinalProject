@@ -50,10 +50,10 @@ function mirarCarrito() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     if (carrito.length === 0) {
         const model = document.getElementById('carrito');
-        model.style.display = 'none';
+       ocultarCarro();
     } else {
         const model = document.getElementById('carrito');
-        model.style.display = 'block';
+        mostrarCarro();
     }
 }
 
@@ -226,7 +226,6 @@ function realizarCompra() {
 function cerrarCheckout() {
     const modal = document.getElementById('checkout-modal');
     modal.style.display = 'none';
-    ocultarCarro();
 }
 
 /* añadido para que el Carrito tambien este escondido */
